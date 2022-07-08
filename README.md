@@ -1,10 +1,10 @@
 # Creatio
 
 ## PRE-Requisites
-- Install [Node](https://nodejs.org/en/)
-- Install [Visual Studio Code](https://code.visualstudio.com/)
-- Install [Curl](https://curl.se/download.html)
-- Install [Yeoman](https://yeoman.io/).
+- [Node](https://nodejs.org/en/) (ver v16.15.1)
+- [Visual Studio Code](https://code.visualstudio.com/) (or similar IDE)
+- [Curl](https://curl.se/download.html)
+- Install [Yeoman](https://yeoman.io/)
 
 ## How to create custom template on Creatio
 
