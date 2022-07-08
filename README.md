@@ -68,6 +68,19 @@ curl -X 'POST' \
 
 ```
 
+Pick the id form POST response, needed to download the video:
+```bash
+{
+  "success": [
+    {
+      "externalId": "YOUR_VIDEO_EXTERNAL_ID",
+      "id": "YOUR_VIDEO_ID"
+    }
+  ],
+  "failure": []
+}
+```
+
 Download video (return 404 if not processed yet):
 ```bash
 curl -X 'GET' \
