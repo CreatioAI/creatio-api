@@ -9,6 +9,7 @@
 
 ## How to create custom template on Creatio
 
+Open terminal on your computer.
 
 Download and install the generator via npm:
 ```bash
@@ -24,13 +25,13 @@ Modify files and fill it with the information of your template.
 
 Upload template:
 ```bash
--curl -X post -H "Bearer YOUR_TOKEN_HERE" http://app-creatio-api-dev-weu.azurewebsites.net/api/templates 
+-curl -X post -H "Bearer YOUR_TOKEN_HERE" https://api.creatio.ai/api/templates 
 ```
 
 Get the new template:
 ```bash
 curl -X 'GET' \
-  'http://app-creatio-api-dev-weu.azurewebsites.net/api/templates/YOUR_TEMPLATE_ID_HERE' \
+  'https://api.creatio.ai/api/templates/YOUR_TEMPLATE_ID_HERE' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer YOUR_TOKEN_HERE'
 ```
@@ -38,7 +39,7 @@ curl -X 'GET' \
 Create video using the new template:
 ```bash
 curl -X 'POST' \
-  'http://app-creatio-api-dev-weu.azurewebsites.net/api/videos' \
+  'https://api.creatio.ai/api/videos' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer YOUR_TOKEN_HERE' \
   -H 'Content-Type: application/json' \
@@ -70,7 +71,7 @@ curl -X 'POST' \
 Download video (return 404 if not processed yet):
 ```bash
 curl -X 'GET' \
-  'http://app-creatio-api-dev-weu.azurewebsites.net/api/videos/YOUR_VIDEO_ID_HERE/download' \
+  'https://api.creatio.ai/api/videos/YOUR_VIDEO_ID_HERE/download' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer YOUR_TOKEN_HERE'
 ```
