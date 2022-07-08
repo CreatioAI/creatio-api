@@ -76,4 +76,4 @@ curl -X 'GET' \
   -H 'Authorization: Bearer YOUR_TOKEN_HERE'
 ```
 
-> If you're an advanced user, you can check our Swagger at the following URL: http://app-creatio-api-dev-weu.azurewebsites.net/swagger/index.html#/
+> If you're an advanced user, you can check our Swagger at the following URL: https://alpha-api.creatio.ai/swagger/index.html#/
