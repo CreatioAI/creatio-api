@@ -1,7 +1,8 @@
 # Creatio
 
 ## PRE-Requisites
-- [Node](https://nodejs.org/en/) (ver v16.15.1)
+#### These are the following pre-requisites to perform this tutorial:
+- [Node](https://nodejs.org/en/) (v16.15.1)
 - [Visual Studio Code](https://code.visualstudio.com/) (or similar IDE)
 - [Curl](https://curl.se/download.html)
 - Install [Yeoman](https://yeoman.io/)
