@@ -6,26 +6,30 @@
 - Npm 3 or higher (which comes bundled with Node)
 - Git 
 - [Visual Studio Code](https://code.visualstudio.com/) (or similar IDE)
-- [Curl](https://curl.se/download.html)
+- Download [Curl](https://curl.se/windows/) for Windows (Linux and iOS is already installed), include the bin folder in path.
 - Install [Yeoman](https://yeoman.io/)
+- Ask for a token at the following email: support.creatio@creatio.ai
 
-## How to create custom template on Creatio
+## How to create a custom template with Creatio
 
-Open terminal on your computer.
+Open a terminal on your computer (cmd, bash, terminal...)
 
 Download and install the generator via npm:
 ```bash
 $ npm i -g @creatioai/generator-helloworldtemplate
 ```
  
-Use the yeoman:
+Use yeoman to start with "Hello world template":
 ```bash
 $ yo @creatioai/helloworldtemplate
 ```
 
-Modify files and fill it with the information of your template.
+Open the created template folder with your prefered IDE (this is for VSCode) and modify the parameters you wish to change.
+```bash
+$ code .
+```
 
-Upload template:
+Once you have finished the different parameters, upload the template with the following call:
 ```bash
 -curl -X post -H "Bearer YOUR_TOKEN_HERE" https://api.creatio.ai/api/templates 
 ```
