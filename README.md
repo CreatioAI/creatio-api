@@ -29,49 +29,56 @@ Open the created template folder with your prefered IDE (this is for VSCode) and
 $ code .
 ```
 
-Once you have finished the different parameters, upload the template with the following call:
+Once you have finished the different parameters, go to the package.zip path:
 ```bash
--curl -X post -H "Bearer YOUR_TOKEN_HERE" https://api.creatio.ai/api/templates 
+$ cd packages/package
+```
+
+Upload the template with the following call: 
+```bash 
+curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "accept: */*" -H "Content-Type: multipart/form-data" -F "files=@package.zip;type=application/x-zip-compressed" -X "POST" https://api.creatio.ai/api/templates
 ```
 
 Get the new template:
 ```bash
-curl -X 'GET' \
-  'https://api.creatio.ai/api/templates/YOUR_TEMPLATE_ID_HERE' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer YOUR_TOKEN_HERE'
+curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "accept: application/json" -X "GET" https://api.creatio.ai/api/templates/YOUR_TEMPLATE_ID_HERE
 ```
+
+Create data.json file with the information of your request. New file on IDE and paste the following information:
+```bash
+[
+    {
+      "properties": {
+      },
+      "templateId": "YOUR_TEMPLATE_ID_HERE",
+      "variables": [
+        {
+          "properties": {
+          },
+          "variableName": "YOUR_VARIABLE_NAME_HERE",
+          "value": "YOUR_VARIABLE_VALUE_HERE"
+        },
+        {
+            "properties": {
+            },
+            "variableName": "YOUR_VARIABLE_NAME_HERE",
+          "value": "YOUR_VARIABLE_VALUE_HERE" 
+        }
+      ],
+      "webhook": {
+        "url": "",
+        "token": ""
+      },
+      "preferedDate": "",
+      "externalId": "YOUR_VIDEO_NAME_HERE"
+    }
+]
+```
+
 
 Create video using the new template:
 ```bash
-curl -X 'POST' \
-  'https://api.creatio.ai/api/videos' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer YOUR_TOKEN_HERE' \
-  -H 'Content-Type: application/json' \
-  -d '[
-  {
-    "templateId": "YOUR_TEMPLATE_ID_HERE",
-    "variables": [
-    {
-        "properties" : {}, 
-        "variableName": "YOUR_SCENE_WIDGET_VARIABLENAME_HERE",
-        "value": "YOUR_DESIRED_VALUE_HERE"
-    },
-    {
-        "properties" : {}, 
-        "variableName": "YOUR_SCENE_WIDGET_VARIABLENAME_HERE",
-        "value": "YOUR_DESIRED_VALUE_HERE"
-    }
-    ],
-    "webhook": {
-        "url": "",
-        "token": ""
-    },
-    "externalId": "YOUR_VIDEO_NAME_HERE",
-    "properties": {},
-]'
-
+curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Accept: application/json" -H "Content-Type: application/json" -d "@data.json" -X "POST" https://api.creatio.ai/api/videos
 ```
 
 Pick the id form POST response, needed to download the video:
@@ -89,10 +96,7 @@ Pick the id form POST response, needed to download the video:
 
 Download video (return 404 if not processed yet):
 ```bash
-curl -X 'GET' \
-  'https://api.creatio.ai/api/videos/YOUR_VIDEO_ID_HERE/download' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Bearer YOUR_TOKEN_HERE'
+ccurl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Accept: application/json" -X "GET" https://api.creatio.ai/api/videos/YOUR_VIDEO_ID/download
 ```
 
 > If you're an advanced user, you can check our Swagger at the following URL: https://alpha-api.creatio.ai/swagger/index.html#/
