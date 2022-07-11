@@ -96,7 +96,7 @@ Pick the id form POST response, needed to download the video:
 
 Download video (return url null if not processed yet):
 ```bash
-ccurl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Accept: application/json" -X "GET" https://api.creatio.ai/api/videos/YOUR_VIDEO_ID/download
+curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Accept: application/json" -X "GET" https://api.creatio.ai/api/videos/YOUR_VIDEO_ID/download
 ```
 
 > If you're an advanced user, you can check our Swagger at the following URL: https://alpha-api.creatio.ai/swagger/index.html#/
