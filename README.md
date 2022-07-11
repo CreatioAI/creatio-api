@@ -1,8 +1,10 @@
-# Creatio
+# How to start with Creatio
 
 ## PRE-Requisites
 #### These are the following pre-requisites to perform this tutorial:
-- [Node](https://nodejs.org/en/) (v16.15.1)
+- [Node](https://nodejs.org/en/) (v6 or higher)
+- Npm 3 or higher (which comes bundled with Node)
+- Git 
 - [Visual Studio Code](https://code.visualstudio.com/) (or similar IDE)
 - [Curl](https://curl.se/download.html)
 - Install [Yeoman](https://yeoman.io/)
