@@ -94,7 +94,7 @@ Pick the id form POST response, needed to download the video:
 }
 ```
 
-Download video (return 404 if not processed yet):
+Download video (return url null if not processed yet):
 ```bash
 ccurl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "Accept: application/json" -X "GET" https://api.creatio.ai/api/videos/YOUR_VIDEO_ID/download
 ```
