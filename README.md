@@ -29,6 +29,11 @@ Open the created template folder with your prefered IDE (this is for VSCode) and
 $ code .
 ```
 
+To generate the package.zip:
+```bash
+$ npm run package
+```
+
 Once you have finished the different parameters, go to the package.zip path:
 ```bash
 $ cd packages/package
@@ -51,20 +56,10 @@ Create data.json file with the information of your request. New file on IDE and 
       "properties": {
       },
       "templateId": "YOUR_TEMPLATE_ID_HERE",
-      "variables": [
-        {
-          "properties": {
-          },
-          "variableName": "YOUR_VARIABLE_NAME_HERE",
-          "value": "YOUR_VARIABLE_VALUE_HERE"
+      "variables": {
+          "YOUR_VARIABLE_NAME_HERE": "YOUR_VARIABLE_VALUE_HERE",
+          "YOUR_VARIABLE_NAME_HERE": "YOUR_VARIABLE_VALUE_HERE"
         },
-        {
-            "properties": {
-            },
-            "variableName": "YOUR_VARIABLE_NAME_HERE",
-          "value": "YOUR_VARIABLE_VALUE_HERE" 
-        }
-      ],
       "webhook": {
         "url": "",
         "token": ""
