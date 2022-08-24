@@ -43,6 +43,7 @@ Open file "template_testing.json" and complete all metadata:
 
 Edit the existing scenes (scene1 & scene2) or add new scenes inside the Scenes folder.
 To see the configuration of scenes and their widgets, please go to the following [link](https://github.com/CreatioAI/creatio-api/tree/main/templates/widgets)
+
 Each scene has some variables to refer dynamics fields for the widgets. 
 
 ```bash
