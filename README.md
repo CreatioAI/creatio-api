@@ -42,7 +42,7 @@ Open file "template_testing.json" and complete all metadata:
 ```
 
 Edit the existing scenes (scene1 & scene2) or add new scenes inside the Scenes folder.
-To see the configuration of scenes and their widgets, please go to the following [link](https://github.com/CreatioAI/creatio-api/tree/main/templates/widgets)
+To see the configuration of scenes and their widgets, please go to the following [link](https://github.com/CreatioAI/creatio-api/tree/main/templates/widgets).
 
 Each scene has some variables to refer dynamics fields for the widgets. 
 
@@ -86,10 +86,15 @@ Upload the template with the following call:
 curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "accept: */*" -H "Content-Type: multipart/form-data" -F "files=@package.zip;type=application/x-zip-compressed" -X "POST" https://api.creatio.ai/api/templates
 ```
 
-Get the new template:
+To check if your template has been uploaded, use the get template method:
 ```bash
 curl -H "Authorization: Bearer YOUR_TOKEN_HERE" -H "accept: application/json" -X "GET" https://api.creatio.ai/api/templates/YOUR_TEMPLATE_ID_HERE
 ```
+
+Congratulations! Your new template has been uploaded correctly!
+
+
+## Create a video
 
 Create data.json file with the information of your request. New file on IDE and paste the following information:
 ```bash
@@ -97,19 +102,56 @@ Create data.json file with the information of your request. New file on IDE and 
     {
       "properties": {
       },
-      "templateId": "YOUR_TEMPLATE_ID_HERE",
+      "templateId": "TEMPLATE_ID_HERE",
       "variables": {
-          "YOUR_VARIABLE_NAME_HERE": "YOUR_VARIABLE_VALUE_HERE",
-          "YOUR_VARIABLE_NAME_HERE": "YOUR_VARIABLE_VALUE_HERE"
+          "VARIABLE_NAME_HERE": "VARIABLE_VALUE_HERE",
+          "VARIABLE_NAME_HERE": "VARIABLE_VALUE_HERE"
         },
       "webhook": {
         "url": "",
         "token": ""
       },
       "preferedDate": "",
-      "externalId": "YOUR_VIDEO_NAME_HERE"
+      "externalId": "VIDEO_NAME_HERE"
     }
 ]
+```
+
+Variable types:
+- Text : string
+- Image : string, Public url of resource (gif, png, jpg)
+- Video : string, Public url of resource (mp4)
+- Audio : string, Public url of resource (mp3, mp4)
+- Piechart : Dictionary 
+```bash
+  "variable_piechart_name":
+    {
+      "product1": "40"
+      "product2": "60"
+    }
+```
+
+- Barplots :
+```bash
+  "variable_barplots_name":
+    {
+      "product1": "80"
+      "product2": "55"
+    }
+```
+- Linechart :
+```bash
+ "variables": {
+          "variable_name1":
+                {
+                   "X": [0,1,2,3,4,5,6]
+                   "Y":
+                    {
+                    "dog": [5,5,5,5,5,5,5],
+                    "cat": [1,2,3,4,5,6,7]
+                    }
+                }
+  },
 ```
 
 
