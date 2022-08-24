@@ -7,14 +7,13 @@
 - Git 
 - [Visual Studio Code](https://code.visualstudio.com/) (or similar IDE)
 - Download [Curl](https://curl.se/windows/) for Windows (Linux and iOS is already installed), include the bin folder in path.
-- Install [Yeoman](https://yeoman.io/)
 - Ask for a token at the following email: support.creatio@creatio.ai
 
 ## How to create a custom template with Creatio
 
 Open a terminal on your computer (cmd, bash, terminal...)
 
-Download and install the generator via npm:
+Clone the template example base to create your own template:
 ```bash
 $ git clone https://github.com/CreatioAI/creatio-templates.git
 ```
@@ -25,12 +24,58 @@ $ cd creatio-templates
 $ code .
 ```
 
-To generate the package.zip:
+Open file "template_testing.json" and complete all metadata:
+```bash
+{
+    "name": "", //YOUR_TEMPLATE_NAME_HERE
+    "description": "", //YOUR_TEMPLATE_DESCRIPTION_HERE
+    "id": "", //YOUR_TEMPLATE_ID_HERE
+    "previewGIF": "", //YOUR_GIF_NAME_HERE
+    "visibility": "Private", //Private_OR_Public
+    "owner": "", //YOUR_OWNER_NAME_HERE
+    "tags": "", //YOUR_TAGS_HERE - tags 1, tags 2
+    "scenes": //LIST_YOUR_SCENES_HERE 
+    [
+        //YOUR_SCENES_NAME_HERE
+    ]
+}
+```
+
+Edit the existing scenes (scene1 & scene2) or add new scenes inside the Scenes folder.
+To see the configuration of scenes and their widgets, please go to the following [link](https://github.com/CreatioAI/creatio-api/tree/main/templates/widgets)
+Each scene has some variables to refer dynamics fields for the widgets. 
+
+```bash
+...
+    "parameters": [
+        {
+            "id": "variable_name1", //YOUR_VARIABLE_NAME_HERE
+            "description":"Variable Name" //YOUR_VARIABLE_DESCRIPTION_HERE
+        },
+        {
+            "id": "variable_name2",
+            "description":"Variable Name"
+        }
+    ],
+...
+"widgets": [
+        {
+          ...
+            "value": "{variable_name1}", //YOUR_WIDGET_DEFAULT_VALUE_HERE
+          ...
+        },
+...
+```
+
+The Assets folder is for PreviewGif of template and Video parameter of each scene.
+The video assets could be in mp4 format.
+
+Once you have finished the different parameters, generate the package.zip:
 ```bash
 $ npm run package
 ```
 
-Once you have finished the different parameters, go to the package.zip path:
+Go to the package.zip path:
 ```bash
 $ cd packages/package
 ```
