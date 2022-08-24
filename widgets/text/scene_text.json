@@ -1,0 +1,45 @@
+//This is a scene with a text widget:
+
+
+{
+    "id": "scene_text",
+    "type": "Type example",
+    "name": "Name example",
+    "video": "scene_text.mp4",
+    "parameters": [
+        {
+          "id": "variable_text",
+          "description": "Text"
+        }
+      ],
+    "widgets": [
+        {
+            "id": "widget1",
+            //The type has to be "text"
+            "type": "text",
+            "variableName": "variable_text",
+            "features": {
+                //This features are mandatory:
+                //font: Choice a font
+                "font": "Titan-One",
+                //color: Choice a color
+                "color": "#E9914B",
+                //color: Choice a the type of align
+                "align": "center"
+            },
+            "transition": {
+                "delay": 1,
+                "duration": 3.15,
+                "fadeIn": 0.3,
+                "fadeOut": 0.3
+            },
+            "position": {
+                "x": 670,
+                "y": 185,
+                "w": 570,
+                "h": 320
+            },
+            "properties": {}
+        }  
+    ]
+}

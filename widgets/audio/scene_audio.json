@@ -1,0 +1,38 @@
+//This is a scene with a audio widget:
+
+
+{
+    "id": "scene_audio",
+    "type": "Type example",
+    "name": "Name example",
+    "video": "scene_audio.mp4",
+    "parameters": [
+        {
+          "id": "variable_audio",
+          "description": "audio"
+        }
+      ],
+    "widgets": [
+        {
+            "id": "widget1",
+            //The type has to be "audio"
+            "type": "audio",
+            "variableName": "variable_audio",
+            "features": {
+                //The audio don't have any feature
+            "transition": {
+                "delay": 1,
+                "duration": 3.15,
+                "fadeIn": 0.3,
+                "fadeOut": 0.3
+            },
+            "position": {
+                "x": 670,
+                "y": 185,
+                "w": 570,
+                "h": 320
+            },
+            "properties": {}
+        }  
+    ]
+}

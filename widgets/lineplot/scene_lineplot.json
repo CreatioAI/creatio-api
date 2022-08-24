@@ -1,0 +1,51 @@
+//This is a scene with a lineplot widget:
+
+
+{
+    "id": "scene_lineplot",
+    "type": "Type example",
+    "name": "Name example",
+    "video": "scene_lineplot.mp4",
+    "parameters": [
+        {
+          "id": "variable_lineplot",
+          "description": "lineplot"
+        }
+      ],
+    "widgets": [
+        {
+            "id": "widget1",
+            //The type has to be "lineplot"
+            "type": "lineplot",
+            "variableName": "variable_lineplot",
+            "features": {
+                //This feature are not mandatory:
+                //chartAnimationDuration it's a number. This number represents the time (in seconds) of the duration of the animation.
+                //If the feature is not set, by default it will be a static image.
+                "chartAnimationDuration": 2,
+                //If chartAnimationDuration is set, this feature it's mandatory
+                //charAnimationType can be all or individual. If is all, in the animation all of the bars go appear at the same time. In the case, each bar go appear one by one
+                "charAnimationType": "all",
+                //This feature it's not mandatory
+                //graphAbsolute can be true or false. If it's true, the max value of Y go be 1. It's false by default.
+                "graphAbsolute": true,
+                //displayLegend can be true or false. If it's true, the legend go appear in the graphic. It's true by default.
+                "displayLegend": true
+        
+            },
+            "transition": {
+                "delay": 1,
+                "duration": 3.15,
+                "fadeIn": 0.3,
+                "fadeOut": 0.3
+            },
+            "position": {
+                "x": 670,
+                "y": 185,
+                "w": 570,
+                "h": 320
+            },
+            "properties": {}
+        }  
+    ]
+}

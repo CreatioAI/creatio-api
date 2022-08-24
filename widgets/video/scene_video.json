@@ -1,0 +1,42 @@
+//This is a scene with a video widget:
+
+
+{
+    "id": "scene_video",
+    "type": "Type example",
+    "name": "Name example",
+    "video": "scene_video.mp4",
+    "parameters": [
+        {
+          "id": "variable_video",
+          "description": "video"
+        }
+      ],
+    "widgets": [
+        {
+            "id": "widget1",
+            //The type has to be "video"
+            "type": "video",
+            "variableName": "variable_video",
+            "features": {
+                //This feature is not mandatory:
+                //keep_aspect_ratio can be True or False, if it's true, the aspect ratio go be modified by
+                //the aspect ratio of the scene video. It's false by default
+                "keep_aspect_ratio": false
+            },
+            "transition": {
+                "delay": 1,
+                "duration": 3.15,
+                "fadeIn": 0.3,
+                "fadeOut": 0.3
+            },
+            "position": {
+                "x": 670,
+                "y": 185,
+                "w": 570,
+                "h": 320
+            },
+            "properties": {}
+        }  
+    ]
+}

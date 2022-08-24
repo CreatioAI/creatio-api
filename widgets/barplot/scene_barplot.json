@@ -1,0 +1,45 @@
+//This is a scene with a barplot widget:
+
+
+{
+    "id": "scene_barplot",
+    "type": "Type example",
+    "name": "Name example",
+    "video": "scene_barplot.mp4",
+    "parameters": [
+        {
+          "id": "variable_barplot",
+          "description": "barplot"
+        }
+      ],
+    "widgets": [
+        {
+            "id": "widget1",
+            //The type has to be "barplot"
+            "type": "barplot",
+            "variableName": "variable_barplot",
+            "features": {
+                //This feature are not mandatory:
+                //chartAnimationDuration it's a number. This number represents the time (in seconds) of the duration of the animation.
+                //If the feature is not set, by default it will be a static image.
+                "chartAnimationDuration": 2,
+                //If chartAnimationDuration is set, this feature it's mandatory
+                //charAnimationType can be all or individual. If is all, in the animation all of the bars go appear at the same time. In the case, each bar go appear one by one
+                "charAnimationType": "all"
+            },
+            "transition": {
+                "delay": 1,
+                "duration": 3.15,
+                "fadeIn": 0.3,
+                "fadeOut": 0.3
+            },
+            "position": {
+                "x": 670,
+                "y": 185,
+                "w": 570,
+                "h": 320
+            },
+            "properties": {}
+        }  
+    ]
+}
