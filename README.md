@@ -16,16 +16,12 @@ Open a terminal on your computer (cmd, bash, terminal...)
 
 Download and install the generator via npm:
 ```bash
-$ npm i -g @creatioai/generator-helloworldtemplate
-```
- 
-Use yeoman to start with "Hello world template":
-```bash
-$ yo @creatioai/helloworldtemplate
+$ git clone https://github.com/CreatioAI/creatio-templates.git
 ```
 
 Open the created template folder with your prefered IDE (this is for VSCode) and modify the parameters you wish to change.
 ```bash
+$ cd creatio-templates
 $ code .
 ```
 
