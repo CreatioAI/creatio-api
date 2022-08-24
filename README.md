@@ -119,9 +119,21 @@ Create data.json file with the information of your request. New file on IDE and 
 
 Variable types:
 - Text : string
+```bash
+  "variable_text_name": "Hello from Creatio!"
+```
 - Image : string, Public url of resource (gif, png, jpg)
+```bash
+  "variable_image_name": "URL_HERE"
+```
 - Video : string, Public url of resource (mp4)
+```bash
+  "variable_video_name": "URL_HERE"
+```
 - Audio : string, Public url of resource (mp3, mp4)
+```bash
+  "variable_audio_name": "URL_HERE"
+```
 - Piechart : Dictionary 
 ```bash
   "variable_piechart_name":
